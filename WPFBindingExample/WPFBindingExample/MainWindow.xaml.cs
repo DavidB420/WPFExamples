@@ -20,10 +20,16 @@ namespace WPFBindingExample
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int _x = 0;
+
+        public string TestString { get; set; } = "Hello";
+
+
         public MainWindow()
         {
             InitializeComponent();
             ResizeMode = ResizeMode.NoResize;
+            this.DataContext = this;
         }
     }
 }

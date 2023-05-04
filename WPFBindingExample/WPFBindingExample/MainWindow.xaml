@@ -8,7 +8,7 @@
         Title="Test Window" Height="450" Width="800">
     <Grid>
         <Label Content="{Binding ElementName=ATextBox, Path=Text }" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="24" Width="780"/>
-        <Button Content="{Binding ElementName=ATextBox, Path=Text }" HorizontalAlignment="Left" Margin="337,206,0,0" VerticalAlignment="Top" Height="89" Width="152"/>
+        <Button Content="{Binding  TestString}" HorizontalAlignment="Left" Margin="337,206,0,0" VerticalAlignment="Top" Height="89" Width="152"/>
         <TextBox Name="ATextBox" HorizontalAlignment="Center" Margin="0,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="780"/>
 
     </Grid>
