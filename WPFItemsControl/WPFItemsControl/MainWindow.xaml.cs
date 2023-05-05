@@ -23,6 +23,8 @@ namespace WPFItemsControl
 
         public string[] NamesList;
 
+        public ObservableCollection<Object> tCollection;
+
 
         public string[] Names
         {
@@ -52,9 +54,7 @@ namespace WPFItemsControl
             string[] Names2 = new string[Names.Length+1];
 
             for (int i = 0; i < Names.Length; i++)
-            {
                 Names2[i] = Names[i];
-            }
 
             Names2[Names.Length] = value;
 
@@ -68,18 +68,36 @@ namespace WPFItemsControl
 
             this.DataContext = this;
 
-            Names = new string[]{"Steve","Mike","Maya","David","Clara"};
-            //testCollection = new ObservableCollection<Button> { new Button(), new Button(), new Button() };
+            Names = new string[] { "Steve", "Mike", "Maya", "David", "Clara" };
 
         }
 
-        public ObservableCollection<Button> testCollection { get; set; }
+        public ObservableCollection<Object> testCollection
+        {
+            get
+            {
+                return tCollection;
+            }
+
+
+            set
+            {
+                tCollection = value;
+                OnPropertyChanged("testCollection");
+            }
+
+        }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             _value++;
 
             Add("New Name #" + _value);
+        }
+
+        private void ButtonBase2_OnClick(object sender, RoutedEventArgs e)
+        {
+            testCollection = new ObservableCollection<object>(){new Button(), new Button()};
         }
     }
 
