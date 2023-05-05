@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFItemsControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Item Control Example" Height="450" Width="800">
     <Grid>
-
+        <ItemsControl Name="IControl" Background="SaddleBrown" ItemsSource="{Binding testCollection}">
+            <Label>A Label</Label>
+            <Button>A button</Button>
+            <CheckBox>A checkbox</CheckBox>
+        </ItemsControl>
     </Grid>
 </Window>
