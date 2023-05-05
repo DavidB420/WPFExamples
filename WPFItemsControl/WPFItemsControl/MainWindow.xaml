@@ -9,8 +9,9 @@
     <Grid>
         <ItemsControl Name="IControl" Background="SaddleBrown" ItemsSource="{Binding testCollection}">
             <Label>A Label</Label>
-            <Button>A button</Button>
+            <Button Click="ButtonBase_OnClick">A button</Button>
             <CheckBox>A checkbox</CheckBox>
+            <ListBox ItemsSource="{Binding Names}"></ListBox>
         </ItemsControl>
     </Grid>
 </Window>
