@@ -9,10 +9,20 @@
     <Grid>
         <ItemsControl Name="IControl" Background="SaddleBrown" ItemsSource="{Binding testCollection}">
             <Label>A Label</Label>
-            <Button Click="ButtonBase_OnClick">A button</Button>
+            <Button Click="ButtonBase_OnClick" >A button</Button>
             <Button Click="ButtonBase2_OnClick">Another button</Button>
             <CheckBox>A checkbox</CheckBox>
             <ListBox ItemsSource="{Binding Names}"></ListBox>
+            <ComboBox ItemsSource="{Binding Names}"></ComboBox>
+            <RadioButton Name="rButton1" Content="{Binding Names[0]}"></RadioButton>
+            <ItemsControl ItemsSource="{Binding Names}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton Content="{Binding}"/> <!--Gets binding from ItemsControl-->
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBox Text="{Binding Names[0]}"></TextBox>
         </ItemsControl>
 
     </Grid>

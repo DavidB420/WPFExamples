@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\BadieD26035\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\BadieD26035\\.nuget\\packages"
+      "C:\\Users\\David Badiei\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\David Badiei\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
