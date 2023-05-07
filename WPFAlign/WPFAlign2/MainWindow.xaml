@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAlign2"
         mc:Ignorable="d"
-        Title="Web Browser" Height="450" Width="800"
-        SizeChanged="WindowSizeChanged">
-    <Grid>
+        Title="Web Browser" Height="450" Width="800">
+    <DockPanel x:Name="MainPanel">
         <Menu DockPanel.Dock="Top" Background="#FFB4B4B4" Height="20" VerticalAlignment="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Exit" Click="MenuItem_OnClick"></MenuItem>
@@ -16,16 +15,25 @@
                 <MenuItem Header="_About" Click="MenuItem2_OnClick"></MenuItem>
             </MenuItem>
         </Menu>
-        <Grid Margin="10,23,0,0">
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Button Grid.Column="0" x:Name="backButton" Content="🠨" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="65" Click="backButton_Click"/>
             <Button Grid.Column="1" x:Name="forwardButton" Content="🠪" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Click="forwardButton_Click"/>
-            <TextBox Grid.Column="2" x:Name="addressBar" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <TextBox Grid.Column="2" Grid.ColumnSpan="5" x:Name="addressBar" TextWrapping="Wrap" Text="" VerticalAlignment="Center"/>
+            <WebBrowser Grid.Row="1" Grid.ColumnSpan="7" x:Name="browserWidget"/>
         </Grid>
-        <WebBrowser x:Name="browserWidget" Margin="10,48,10,10"/>
-    </Grid>
+
+    </DockPanel>
 </Window>

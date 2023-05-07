@@ -29,6 +29,9 @@ namespace WPFAlign2
             InitializeComponent();
             this.DataContext = this;
 
+            //this.SizeChanged += new SizeChangedEventHandler(WindowSizeChanged);
+            
+
             browserWidget.Navigate("http://google.com");
 
             browserWidget.LoadCompleted += new LoadCompletedEventHandler(WebBrowserPageChanged);
@@ -36,10 +39,10 @@ namespace WPFAlign2
             addressBar.KeyDown += new KeyEventHandler(AddressBarEnterPressed);
         }
 
-        private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
+        /*private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
         {
             addressBar.Width = this.Width;
-        }
+        }*/
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
