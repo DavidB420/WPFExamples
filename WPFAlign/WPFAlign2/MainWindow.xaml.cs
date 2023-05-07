@@ -30,11 +30,46 @@ namespace WPFAlign2
             this.DataContext = this;
 
             browserWidget.Navigate("http://google.com");
+
+            browserWidget.LoadCompleted += new LoadCompletedEventHandler(WebBrowserPageChanged);
+
+            addressBar.KeyDown += new KeyEventHandler(AddressBarEnterPressed);
         }
 
         private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
         {
             addressBar.Width = this.Width;
+        }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            browserWidget.GoBack();
+        }
+
+        private void forwardButton_Click(object sender, RoutedEventArgs e)
+        {
+            browserWidget.GoForward();
+        }
+
+        private void MenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void MenuItem2_OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Web Browser v1.0");
+        }
+
+        private void WebBrowserPageChanged(object sender, NavigationEventArgs e)
+        {
+            addressBar.Text = browserWidget.Source.ToString();
+        }
+
+        private void AddressBarEnterPressed(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                browserWidget.Navigate(addressBar.Text);
         }
     }
 }

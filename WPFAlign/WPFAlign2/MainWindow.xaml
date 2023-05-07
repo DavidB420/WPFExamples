@@ -10,10 +10,10 @@
     <Grid>
         <Menu DockPanel.Dock="Top" Background="#FFB4B4B4" Height="20" VerticalAlignment="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_Exit"></MenuItem>
+                <MenuItem Header="_Exit" Click="MenuItem_OnClick"></MenuItem>
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="_About"></MenuItem>
+                <MenuItem Header="_About" Click="MenuItem2_OnClick"></MenuItem>
             </MenuItem>
         </Menu>
         <Grid Margin="10,23,0,0">
@@ -22,8 +22,8 @@
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" x:Name="backButton" Content="🠨" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="65"/>
-            <Button Grid.Column="1" x:Name="forwardButton" Content="🠪" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65"/>
+            <Button Grid.Column="0" x:Name="backButton" Content="🠨" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="65" Click="backButton_Click"/>
+            <Button Grid.Column="1" x:Name="forwardButton" Content="🠪" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Click="forwardButton_Click"/>
             <TextBox Grid.Column="2" x:Name="addressBar" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         </Grid>
         <WebBrowser x:Name="browserWidget" Margin="10,48,10,10"/>
