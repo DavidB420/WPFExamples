@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFAlign", "WPFAlign\WPFAlign.csproj", "{C2B76079-F5DC-448C-AEBA-33A5A43B7605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFAlign2", "WPFAlign2\WPFAlign2.csproj", "{9C34C3F6-409B-49EB-9D29-90854461AF7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2B76079-F5DC-448C-AEBA-33A5A43B7605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B76079-F5DC-448C-AEBA-33A5A43B7605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B76079-F5DC-448C-AEBA-33A5A43B7605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B76079-F5DC-448C-AEBA-33A5A43B7605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C34C3F6-409B-49EB-9D29-90854461AF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C34C3F6-409B-49EB-9D29-90854461AF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C34C3F6-409B-49EB-9D29-90854461AF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C34C3F6-409B-49EB-9D29-90854461AF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1F6D9B9-B6E1-4104-B1AD-1228A79E9813}
+	EndGlobalSection
+EndGlobal
