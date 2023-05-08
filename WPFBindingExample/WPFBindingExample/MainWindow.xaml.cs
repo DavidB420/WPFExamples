@@ -62,7 +62,7 @@ namespace WPFBindingExample
 
         public void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            TestString = "wahhh";
+            TestString = "Hello again";
         }
     }
 }
